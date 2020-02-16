@@ -1,0 +1,24 @@
+@model IEnumerable<mvc_example.Models.Lecture>
+
+@{
+    ViewData["Title"] = "Lecture list";
+}
+
+<h2>Lecture List</h2>
+
+<table class="list-table">
+@foreach (var item in Models) {
+    <tr onclick="location.href = '/Lecture/Watch?lecNo=@item.idx'">
+        <td class="thumbnail">
+            <img src="/img/@item.thumb"/>
+        </td>
+        <td class="title">
+            <span>
+                @item.date
+            </span>
+            <br>
+            @item.title
+        </td>
+    </tr>
+}
+</table>

@@ -1,0 +1,35 @@
+@model mvc_example.Models.Lecture
+
+@{
+    ViewData["Title"] = "Lecture"
+}
+
+<h3>
+    @Model.title
+</h3>
+
+<table class="lec-table">
+    <tr>
+        <td>
+            <span>Lecture number:</span>
+            @Model.idx
+        </td>
+        <td>
+            <span>Category:</span>
+            @Model.category
+        </td>
+        <td>
+            <span>Lecture length:</span>
+            @Model.length
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" class="lec-pic">
+            <iframe width="560" heights="315"
+            src="https://www.youtube.com/embed/@Model.code"
+            frameboarder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </td>
+    </tr>
+</table>
+
